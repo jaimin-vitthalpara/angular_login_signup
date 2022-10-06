@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Restaurent Login</h1>
+                    <hr>
+                </div>
+
+                <form [formGroup]="loginform" (ngSubmit)="login()">
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input type="email" formControlName="email" placeholder="Enter email here" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <span class="text-danger"
+                            *ngIf="loginform.controls['email'].dirty && loginform.hasError('required' , 'email')">Email
+                            id is required.</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" formControlName="password" placeholder="Enter correct password here"
+                            class="form-control" id="exampleInputPassword1">
+                        <span class="text-danger"
+                            *ngIf="loginform.controls['password'].dirty && loginform.hasError('required' , 'password')">Password
+                            is required.</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" [disabled]="!loginform.valid">Login</button>
+                </form>
+                <p>Are you a new user? <a routerLink="/signup">click to Signup</a></p>
+
+            </div>
+        </div>
+    </div>
+</div>

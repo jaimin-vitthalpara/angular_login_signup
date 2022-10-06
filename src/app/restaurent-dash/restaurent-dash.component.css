@@ -1,0 +1,12 @@
+h2 {
+    color: aliceblue;
+    text-transform: capitalize;
+}
+
+h1{
+    text-transform: capitalize;
+}
+
+button {
+    cursor: pointer;
+}

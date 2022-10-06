@@ -1,0 +1,17 @@
+.card {
+    margin-top: 6%;
+    border: 1px solid blue;
+    width: 550px;
+    padding: 45px;
+    position: absolute;
+    left: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
